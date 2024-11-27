@@ -1,0 +1,19 @@
+{
+  "name": "Full Page Screenshot",
+  "description": "Capture a screenshot of the full page.",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "tabs",
+    "debugger",
+    "downloads"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Capture Full Page Screenshot"
+  }
+}
