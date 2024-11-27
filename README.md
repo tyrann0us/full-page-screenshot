@@ -18,6 +18,9 @@ content extends below the fold.
   the [latest release](https://github.com/tyrann0us/full-page-screenshot/releases/latest).
 - Extract the archive.
 
+_For more detailed instructions, refer
+to [Chrome's official documentation](https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world#load-unpacked)._
+
 ### 2. Enable Developer Mode
 
 - Open Chrome and navigate to `chrome://extensions/`.
@@ -34,9 +37,6 @@ content extends below the fold.
 - Click on the **Full Page Screenshot** extension icon in the toolbar.
 - The screenshot will be captured and downloaded automatically to your default download folder.
 
-_For more detailed instructions, refer
-to [Chrome's official documentation](https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world#load-unpacked)._
-
 ## Permissions
 
 The extension requires the following permissions:
@@ -45,10 +45,6 @@ The extension requires the following permissions:
 - `tabs`: Interaction with browser tabs.
 - `debugger`: Use of the debugging protocol for capturing screenshots.
 - `downloads`: Ability to save files to your computer.
-
-## Contributing
-
-Contributions are welcome! Please create
 
 ## Disclaimer
 
@@ -59,7 +55,7 @@ Contributions are welcome! Please create
 ## Contact and Contributing
 
 For questions or suggestions, please open an issue
-on [GitHub](https://github.com/tyrann0us/full-page-screenshot/issues).
+on [GitHub](https://github.com/tyrann0us/full-page-screenshot/issues).  
 Contributions are welcome! If you want to improve the extension, please create a PR.
 
 ## License
