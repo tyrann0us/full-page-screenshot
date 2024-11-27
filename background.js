@@ -75,20 +75,21 @@ chrome.action.onClicked.addListener((tab) => {
       // Allow time for viewport to update
       await new Promise((resolve) => setTimeout(resolve, 200));
 
-      // Capture the screenshot
+      // Capture the screenshot in WebP format
       const screenshot = await sendCommand("Page.captureScreenshot", {
-        format: 'png',
+        format: 'webp',
         fromSurface: true,
       });
       const imageData = screenshot.data;
-      const url = 'data:image/png;base64,' + imageData;
+      const url = 'data:image/webp;base64,' + imageData;
 
       // Create the filename
       const currentDate = new Date();
       const dateString = currentDate.toISOString().slice(0, 10); // YYYY-MM-DD
-      const pageUrl = new URL(tab.url);
-      const sanitizedUrl = pageUrl.hostname.replace(/[^a-z0-9]/gi, '_').toLowerCase();
-      const filename = `screenshot-${sanitizedUrl}-${dateString}.png`;
+      const sanitizedUrl = tab.url.replace(/(^\w+:|^)\/\//, '')
+          .replace(/[^a-z0-9]/gi, '_')
+          .toLowerCase();
+      const filename = `screenshot-${sanitizedUrl}-${dateString}.webp`;
 
       // Download the screenshot
       await new Promise((resolve, reject) => {
